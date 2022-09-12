@@ -1,6 +1,5 @@
 package tpch
 
-import "text/template"
 import "list"
 import "time"
 
@@ -11,10 +10,10 @@ import "time"
 	schema?: string
 }
 
-database: #Database & {
-	dbname: "benches"
-	schema: "tpch"
-}
+//database: #Database & {
+//	dbname: "benches"
+//	schema: "tpch"
+//}
 
 // we want to make sure that each table definition is at least defining a table name, we need that for the query templates
 #Table: {
@@ -463,11 +462,11 @@ _q20_allowed_dates: ["1993-01-01","1994-01-01","1995-01-01", "1996-01-01", "1997
 }
 
 
-seed: #Seed &{
-	db: database
-	params: #q1_params
-}
+//seed: #Seed &{
+//	db: database
+//	params: #q1_params
+//}
 
 
 //input: data & lineitem
-contents: template.Execute(_q1_template, seed)
+//contents: template.Execute(_q1_template, seed)
