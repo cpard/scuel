@@ -10,11 +10,6 @@ import "time"
 	schema?: string
 }
 
-//database: #Database & {
-//	dbname: "benches"
-//	schema: "tpch"
-//}
-
 // we want to make sure that each table definition is at least defining a table name, we need that for the query templates
 #Table: {
 	table_name: !=""
@@ -460,13 +455,3 @@ _q20_allowed_dates: ["1993-01-01","1994-01-01","1995-01-01", "1996-01-01", "1997
 	i6: (!= i1 & != i2 & != i3 & != i4 & != i5 & > 10 & <= 34) | *18
 	i7: (!= i1 & != i2 & != i3 & != i4 & != i5 & != i6 & > 10 & <= 34) | *17
 }
-
-
-//seed: #Seed &{
-//	db: database
-//	params: #q1_params
-//}
-
-
-//input: data & lineitem
-//contents: template.Execute(_q1_template, seed)
